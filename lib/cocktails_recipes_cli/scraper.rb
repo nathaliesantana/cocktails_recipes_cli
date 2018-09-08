@@ -14,11 +14,11 @@ class CocktailsRecipesCli::Scraper
       recipe_hash[:url]= "https://www.foodandwine.com#{li.css("a").attribute('href').text}"
       recipes.push(recipe_hash)
     end
-    CocktailRecipes::Recipes.create_from_array(recipes)
+    CocktailsRecipesCli::Recipes.create_from_array(recipes)
   end
 
   def scrape_profile
-    CocktailRecipes::Recipes.all.each do |recipe|
+    CocktailsRecipesCli::Recipes.all.each do |recipe|
       site= Nokogiri::HTML(open(recipe.url))
       hash = {}
 
@@ -28,7 +28,7 @@ class CocktailsRecipesCli::Scraper
       else
         recipe.ingredients = ingrds.split("\n").map { |string| string.gsub(/\s+(?=\d)/, "") }.delete_if{|str| str[0] == " "}.reject { |c| c.empty? }
       end
-      recipe.instructions = site.css('div.step p').tex
+      recipe.instructions = site.css('div.step p').text
 
     end
   end
