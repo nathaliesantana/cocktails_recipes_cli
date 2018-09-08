@@ -8,4 +8,7 @@ end
 
 
 
-require "cocktails_recipes_cli/version"
+require_relative "./cocktails_recipes_cli/reciper"
+require_relative "./cocktails_recipes_cli/scraper"
+require_relative "./cocktails_recipes_cli/version"
+require_relative "./cocktails_recipes_cli/cli"
