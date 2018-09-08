@@ -11,16 +11,16 @@ class  CocktailsRecipesCli::Cli
     display_cocktails_list
     puts "Type the number of the cocktail you would like to learn."
     input = gets.strip.to_i
-    if (1..CocktailRecipes::Recipes.all.length).include?(input)
-      puts CocktailRecipes::Recipes.all[input-1].name.upcase
+    if (1..CocktailsRecipesCli::Recipes.all.length).include?(input)
+      puts CocktailsRecipesCli::Recipes.all[input-1].name.upcase
       puts ""
       puts "Ingredients"
-      puts CocktailRecipes::Recipes.all[input-1].ingredients
+      puts CocktailsRecipesCli::Recipes.all[input-1].ingredients
       puts ""
       puts "Instructions"
-      puts CocktailRecipes::Recipes.all[input-1].instructions
+      puts CocktailsRecipesCli::Recipes.all[input-1].instructions
       puts ""
-      menu_options
+      another_recipe_menu
     else
       invalid
       list_menu
@@ -56,7 +56,7 @@ class  CocktailsRecipesCli::Cli
   end
 
   def display_cocktails_list
-    CocktailRecipes::Recipes.all.each.with_index do |c, i|
+    CocktailsRecipesCli::Recipes.all.each.with_index do |c, i|
       puts "#{i+1}. #{c.name}"
     end
   end
