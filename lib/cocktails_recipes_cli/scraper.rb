@@ -16,5 +16,14 @@ def scrape_homepage
     recipes.push(recipe_hash)
   end
   CocktailRecipes::Recipes.create_from_array(recipes)
+end
+
+def scrape_profile
+  CocktailRecipes::Recipes.all.each do |recipe|
+    site= Nokogiri::HTML(open(recipe.url))
+    hash = {}
+
+  end
+end
 
 end
