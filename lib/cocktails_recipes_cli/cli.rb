@@ -6,5 +6,13 @@ class  CocktailsRecipesCli::Cli
     main_menu
   end
 
+  def main_menu
+    puts "Here is a list of all of our cocktails:"
+    display_cocktails_list
+    puts "Type the number of the cocktail you would like to learn."
+    input = gets.strip.to_i
+  end
+
+
 
 end
