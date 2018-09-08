@@ -25,4 +25,11 @@ class CocktailsRecipesCli::Recipes
     recipe
   end
 
+  def self.create_from_array(array)
+    array.each do |hash|
+      self.create(hash)
+    end
+   end
+
+
 end
