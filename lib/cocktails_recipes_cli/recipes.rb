@@ -1,0 +1,3 @@
+class CocktailsRecipesCli::Recipes
+
+end
