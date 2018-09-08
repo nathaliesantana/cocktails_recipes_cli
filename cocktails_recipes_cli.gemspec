@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.description = "Displays a list of Classic cocktails recipes with a twist"
   s.authors     = ["Nathalie Santana"]
   s.email       = 'nathalie.scruz@gmail.com'
-  s.files       = ["lib/cocktail_recipes.rb", "lib/cocktail_recipes/cli.rb", "lib/cocktail_recipes/scraper.rb", "lib/cocktail_recipes/recipes.rb",  "lib/cocktail_recipes/version.rb"]
+  s.files       = ["lib/cocktails_recipes_cli.rb", "lib/cocktails_recipes_cli/cli.rb", "lib/cocktails_recipes_cli/scraper.rb", "lib/cocktails_recipes_cli/recipes.rb",  "lib/cocktails_recipes_cli/version.rb"]
 
   s.license     = 'MIT'
   s.executables << 'CocktailsRecipes'
