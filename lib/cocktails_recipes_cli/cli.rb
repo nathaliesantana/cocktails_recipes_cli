@@ -53,6 +53,7 @@ class  CocktailsRecipesCli::Cli
     puts "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
     puts "Im sorry. This is not an option."
     puts "Please try againg."
+    puts ""
   end
 
   def display_cocktails_list
