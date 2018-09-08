@@ -23,6 +23,14 @@ def scrape_profile
     site= Nokogiri::HTML(open(recipe.url))
     hash = {}
 
+    ingrds = site.css('div.ingredients').text
+    if ingrds.count("\r") != 0
+      recipe.ingredients = ingrds.gsub("\r", "_").split.join("\n").gsub("\n", " ").split("_").map {|string| string.split.join(" ") }
+    else
+      recipe.ingredients = ingrds.split("\n").map { |string| string.gsub(/\s+(?=\d)/, "") }.delete_if{|str| str[0] == " "}.reject { |c| c.empty? }
+    end
+    recipe.instructions = site.css('div.step p').tex
+
   end
 end
 
