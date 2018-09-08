@@ -55,6 +55,10 @@ class  CocktailsRecipesCli::Cli
     puts "Please try againg."
   end
 
-
+  def display_cocktails_list
+    CocktailRecipes::Recipes.all.each.with_index do |c, i|
+      puts "#{i+1}. #{c.name}"
+    end
+  end
 
 end
