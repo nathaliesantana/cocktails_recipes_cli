@@ -11,5 +11,18 @@ class CocktailsRecipesCli::Recipes
     @instructions = instructions
   end
 
+  def self.all
+   @@all
+  end
+
+  def save
+    self.class.all.push(self)
+  end
+
+  def self.create(hash)
+    recipe = self.new(hash)
+    recipe.save
+    recipe
+  end
 
 end
