@@ -1,7 +1,7 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "cocktails_recipes_cli/version"
+require_relative "./cocktails_recipes_cli/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "cocktails_recipes_cli"
@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'Nathalie Santana'"]
   spec.email         = ["'nathalie.scruz@gmail.com'"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "Reinvented Classic Cocktails"
+  spec.description   = "Displays a list of Classic cocktails recipes with a twist"
+  spec.homepage      = "https://github.com/nathaliesantana"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
