@@ -28,6 +28,12 @@ class  CocktailsRecipesCli::Cli
 
   end
 
+  def another_recipe_menu
+    puts "Would you like to see another recipe?"
+    puts "Type (Y or N) "
+    input = gets.strip.downcase
+
+  end
 
 
 end
