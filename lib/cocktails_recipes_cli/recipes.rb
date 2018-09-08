@@ -3,5 +3,13 @@ class CocktailsRecipesCli::Recipes
 
   @@all = []
 
+  def initialize(hash)
+   hash.each do |key, value|
+     self.send("#{key}=",value)
+    end
+    @ingredients = []
+    @instructions = instructions
+  end
+
 
 end
