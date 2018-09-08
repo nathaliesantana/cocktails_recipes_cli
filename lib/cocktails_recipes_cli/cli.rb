@@ -42,5 +42,19 @@ class  CocktailsRecipesCli::Cli
     end
   end
 
+  def good_bye
+    puts ""
+    puts "Thank you for your visit."
+    puts "You're welcome to come back anytime!"
+  end
+
+  def invalid
+    puts ""
+    puts "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+    puts "Im sorry. This is not an option."
+    puts "Please try againg."
+  end
+
+
 
 end
