@@ -16,6 +16,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency "bundler", "~> 1.10"
   s.add_development_dependency "rake", "~> 10.0"
   s.add_development_dependency "rspec", "~> 0"
-  s.add_development_dependency "nokogiri", "~> 0"
+  s.add_development_dependency "nokogiri", "~> 1.8.2"
   s.add_development_dependency "pry", "~> 0"
 end
