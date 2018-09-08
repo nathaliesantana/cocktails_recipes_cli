@@ -5,3 +5,9 @@ class CocktailsRecipesCli::Scraper
    self.cocktails_page = url
   end
 end
+
+def scrape_homepage
+  recipes = []
+  site= Nokogiri::HTML(open(self.cocktails_page))
+
+end
